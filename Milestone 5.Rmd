@@ -1,0 +1,31 @@
+---
+title: "Milestone 5"
+author: "Bridger Gordon"
+date: "10/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About Page
+
+This is a short description about my Gov1005 final project and where I got the data, for Milestone 5. For the full dataset (which has been cleaned and processed), you can access the Github repo and a few initial ggplots here: <https://github.com/BridgerGordon/milestone_4_final_ggplots>.
+
+> My Topic
+
+Society is the aggregation of people living together in a - roughly speaking - ordered community. But how do individuals in that community interact with each other? What is the social context of being an individual in a society like? And what does that say about our values as a society? Are we fair or are we exclusionary? Do we live in bubbles or in integrated, diverse communities?
+
+I believe this is a really important question, and so I wanted to analyze the social connections of people in the United States to better understand the ways our society does or doesn't segregate itself. Even though the Civil Rights Act and other reforms were made decades ago, how truly integrated and equal are our communities today by race? Does class / economic success separate Americans into two different social circles, the elite and the working class? Do we live in political echo chambers? How much geographic mobility is there socially?
+
+I hope to look at all of these with this really unique dataset I got my hands on -- the social connectedness of all Americans on Facebook by county. While this isn't node by node every American, it allows us to compare the relationship between communities and see how those communities are related or segregated based on their demographic characteristics. Facebook is used by a large number of Americans, so this dataset is a really unique opportunity to analyze the social context of American society -- especially since Facebook friends are usually a rough digital representation of true social circles.
+
+> My Data
+
+The primary dataset that I collected is the Facebook Social Connectedness Index between every possible combination of counties in America (and also their possible combinations with foreign countries). What this index score actually represents is the relative probability that a person from one county and a person from another county are connected on Facebook (i.e. that they are Facebook friends). This gives us an estimation of the social circles / connectedness of the American population, esp. given how widely used Facebook is as a means of connecting with people you know. I combined this with a supplementary dataset from the American Economic Association that contains demographic data about every county (race, class, politics, teen pregnancy rates, etc.). This hopefully will allow me to compare if certain factors are correlated with social connectedness (like if Americans are socially segregated by class, race, etc.).
+
+To get the Facebook Social Connectedness Index (which my friends and I heard about thru an academic paper), I emailed Facebook with the email address provided at the end of the academic paper. And to my surprise, they agreed to share the data with me for academic purposes. I combined that with the publicly available demographic data from the American Economic Association. The data was pretty clean already, but I used the janitor package and the tidyverse to clean the names, inner_join the datasets, and remove unnecessary columns of variables (ones that don't provide meaningful impact to this analysis).
+
+
+
